@@ -14,7 +14,5 @@ class PracticeFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->realText(10),
-        ];
-    }
-}
+            'title' =>
+$this->faker->realText(10), ]; } }
