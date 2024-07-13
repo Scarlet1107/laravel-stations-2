@@ -11,7 +11,14 @@
 <body>
     <ul>
         @foreach ($movies as $movie)
-        <li>{{ $movie }}</li>
+        <li>
+            <h2>{{ $movie->title }}</h2>
+            <p>{{ $movie->id }}</p>
+            <p>
+                {{ $movie->created_at->format('Y-m-d') }}
+            </p>
+            <img src="{{ $movie->image_url }}" alt="{{ $movie->title }}">
+        </li>
         @endforeach
     </ul>
 </body>
