@@ -43,3 +43,12 @@ Route::get('/practice3', [PracticeController::class, 'sample3']);
 
 // Station 04
 Route::get('/getPractice', [PracticeController::class, 'getPractice']);
+
+
+
+// Station06
+use App\Http\Controllers\MovieController;
+
+Route::get('/movieTest', [MovieController::class, 'movieTest']);
+
+Route::get('/movies', [MovieController::class, 'getMovies']);

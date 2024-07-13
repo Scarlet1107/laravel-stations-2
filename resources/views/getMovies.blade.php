@@ -10,8 +10,8 @@
 
 <body>
     <ul>
-        @foreach ($practices as $practice)
-        <li>タイトル: {{ $practice->title }}</li>
+        @foreach ($movies as $movie)
+        <li>{{ $movie }}</li>
         @endforeach
     </ul>
 </body>

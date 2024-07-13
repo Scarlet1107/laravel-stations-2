@@ -13,12 +13,20 @@ class MovieFactory extends Factory
      */
     public function definition()
     {
+        static $autoIncrement = 1;
+        // return [
+        //     'title' => $this->faker->unique()->word,
+        //     'image_url' => $this->faker->imageUrl(),
+        //     'published_year' => $this->faker->year,
+        //     'description' => $this->faker->realText(20),
+        //     'is_showing' => $this->faker->boolean,
+        // ];
         return [
-            'title' => $this->faker->unique()->word,
+            'id' => $autoIncrement++,
+            'title' => $this->faker->realText(10),
             'image_url' => $this->faker->imageUrl(),
-            'published_year' => $this->faker->year,
-            'description' => $this->faker->realText(20),
-            'is_showing' => $this->faker->boolean,
+            'created_at' => $this->faker->dateTime(),
+            'updated_at' => $this->faker->dateTime(),
         ];
     }
 }
